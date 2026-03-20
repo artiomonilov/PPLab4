@@ -2,9 +2,15 @@ class Content (
     private var author: String,
     private var text: String,
     private var name: String,
-    private var publisher: String
+    private var publisher: String,
+    private var price: Number
 )
 {
+    fun getPrice():Number = price
+    fun setPrice(price: Number) {
+        this.price = price
+    }
+
     fun getAuthor(): String = author
     fun setAuthor(author: String) {
         this.author = author
@@ -24,6 +30,5 @@ class Content (
     fun setPublisher(publisher: String) {
         this.publisher = publisher
     }
-
 
 }

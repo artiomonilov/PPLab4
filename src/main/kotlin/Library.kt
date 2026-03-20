@@ -1,4 +1,4 @@
-// Library.kt
+
 class Library {
 
     private val books: MutableSet<Book> = mutableSetOf()
@@ -17,4 +17,8 @@ class Library {
 
     fun findAllByPublisher(publisher: String): Set<Book> =
         books.filter { it.isPublishedBy(publisher) }.toSet()
+
+    fun findAllByPrice(price: Number): Set<Book> =
+        books.filter { it.hasPrice(price) }.toSet()
+
 }

@@ -1,4 +1,3 @@
-// LibraryPrinter.kt
 import com.google.gson.Gson
 
 class LibraryPrinter {

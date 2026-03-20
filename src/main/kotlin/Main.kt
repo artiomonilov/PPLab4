@@ -1,24 +1,26 @@
 fun main() {
-
     val content1 = Content(
         author = "Andrei",
         text = "Nuvela",
         name = "Nume 789",
-        publisher = "Publicari 1"
+        publisher = "Publicari 1",
+        price=123
     )
 
     val content2 = Content(
         author = "Mihai",
         text = "Roman",
         name = "Nume 543",
-        publisher = "Publicari 2"
+        publisher = "Publicari 2",
+        price=555
     )
 
     val content3 = Content(
         author = "Adrian",
         text = "Poezii",
         name = "Nume 123",
-        publisher = "Publicari 3"
+        publisher = "Publicari 3",
+        price=888
     )
 
 
@@ -48,6 +50,11 @@ fun main() {
     println("\nCarte publicata de Publicari 3")
     val booksByPublisher = library.findAllByPublisher("Publicari 3")
     printer.printBooksRaw(booksByPublisher)
+
+
+    println("\nCarte cu pretul 888")
+    val pricedBooks = library.findAllByPrice(888)
+    printer.printBooksRaw(pricedBooks)
 
     println("\ncodul HTML")
     printer.printHTML(library.getBooks())

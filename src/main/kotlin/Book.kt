@@ -1,6 +1,6 @@
 class Book (private val content: Content) {
     override fun toString(): String {
-        return "Book(name=${content.getName()}, author=${content.getAuthor()}, publisher=${content.getPublisher()})"
+        return "Book(name=${content.getName()}, author=${content.getAuthor()}, publisher=${content.getPublisher()}, price=${content.getPrice()})"
     }
 
     fun getName(): String = content.getName()
@@ -11,6 +11,8 @@ class Book (private val content: Content) {
 
     fun getContent(): String = content.getText()
 
+    fun getPrice(): Number = content.getPrice()
+
     fun hasAuthor(author: String): Boolean =
         content.getAuthor().equals(author, ignoreCase = true)
 
@@ -19,4 +21,7 @@ class Book (private val content: Content) {
 
     fun isPublishedBy(publisher: String): Boolean =
         content.getPublisher().equals(publisher, ignoreCase = true)
+
+    fun hasPrice(price: Number): Boolean =
+        content.getPrice() == price
 }
